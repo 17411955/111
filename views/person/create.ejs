@@ -1,0 +1,102 @@
+<!--create.ejs-->
+<h4>Fare Create form</h4>
+
+<form action="/person/create" method="POST" class="form-horizontal">
+  <div="card col-sm-12 col-md-6">
+    <div class="form-group">
+        <label class="control-label col-sm-12">Region: </label><br>
+          <select style="width:300px" class="form-control" id="culture" onchange="cultureSelected()">
+          <option value="nan">Please select one:</option>
+          <option value="EA">East Asia</option>
+          <option value="SEA">South-east Asia</option>
+          <option value="A">Americas</option>
+          </select>
+      </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-12">city: </label><br>
+        <select style="width:300px" class="form-control" id="City" disabled>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-12">Class: </label><br>
+        <select style="width:300px" class="form-control" id="Class" disabled>
+        </select><br>
+        Price:
+        <br>
+        <input class="form-control" name="Person[Price]" type="text">
+    </div>
+</div>
+<div class="card">
+   <div class="col-sm-12 col-md-6">
+       <form action="/action_page.php">Image:
+       <br>
+       <input class="form-control" name="Person[Image]" type="text">
+       <br>Deal Valid Till:
+       <br>
+       <input class="form-control" name="Person[Deal]" type="text">
+       <br>Quota:
+       <br>
+       <input class="form-control" name="Person[Quota]" type="text">
+       <br>
+     </form>Date:
+       <br>
+       <input class="form-control" name="Person[Date]" type="date">
+       </div>
+</div>
+
+    <button class="btn btn-default" type="submit" value="ADD">Submit</button>
+</form>
+
+<script type="text/javascript">
+function cultureSelected() {
+  var culture = document.getElementById("culture").value;
+
+  var zodiac = document.getElementById("City");
+  City.options.length = 0;
+  if (culture == "EA") {
+
+    var option = document.createElement("option");
+    option.text = "Osake";
+    option.value = "OSAKA";
+    City.add(option);
+
+    var option = document.createElement("option");
+    option.text = "Seoul";
+    option.value = "SEOUL";
+    City.add(option);
+
+    City.disabled = false;
+}
+if (culture == "SEA") {
+
+  var option = document.createElement("option");
+  option.text = "Cebu";
+  option.value = "CEBU";
+  City.add(option);
+
+  var option = document.createElement("option");
+  option.text = "Singapore";
+  option.value = "SINGAPORE";
+  City.add(option);
+
+  City.disabled = false;
+}
+if (culture == "A") {
+
+  var option = document.createElement("option");
+  option.text = "Los Angeles";
+  option.value = "LOSANGELES";
+  City.add(option);
+
+  var option = document.createElement("option");
+  option.text = "Boston";
+  option.value = "BOSTON";
+  City.add(option);
+
+  City.disabled = false;
+}
+}
+
+</script>

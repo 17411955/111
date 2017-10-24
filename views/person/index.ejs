@@ -1,0 +1,58 @@
+<!--index.ejs-->
+<table class="table">
+    <% persons.forEach( function(model) { %>
+        <tr><td><%=model.name%></td><td><%=model.age%></td></tr>
+    <% }); %>
+    <body>
+    <!--Hawaii-->
+    <div class="card" >
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card body">
+          <img style="display:block; margin:0 0;" src="Hawaii.jpg" width="400" height="200">
+          <a href="Hawaii.html" class="Hawaii">Hawaii</a>
+          <p class="card-text">Economy class,$6400</p>
+          <p class="card-text">Valid till:10/29/2017. Qouta left:100</p>
+          <p class="date">10/01/2017-31/10/2017</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Walnut Creek-->
+    <div class="card" >
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card body">
+          <img style="display:block; margin:0 0;" src="Walnut creek.jpg" width="400" height="200">
+          <a href="Walnut Creek.html" class="Walnut">Walnut Creek</a>
+          <p class="card-text">Business class,$7500</p>
+          <p class="card-text">Valid till:10/29/2017. Qouta left:150</p>
+          <p class="date">10/01/2017-31/10/2017</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Rochy Mountain-->
+    <div class="card" >
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card body">
+          <img style="display:block; margin:0 0;" src="rocky mountain.jpg" width="400" height="200">
+          <a href="Rocky Mountain.html" class="Rocky">Rocky Mountain</a>
+          <p class="card-text">Economy class,$5300</p>
+          <p class="card-text">Valid till:10/29/2017. <span style="color:red">Sold out</span></p>
+          <p class="date">10/01/2017-31/10/2017</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Peru-->
+    <div class="card" >
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card body">
+          <img style="display:block; margin:0 0;" src="Peru.jpg" width="400" height="200">
+          <a href="Peru.html" class="Peru">Peru</a>
+          <p class="card-text">Economy class,$8300</p>
+          <p class="card-text">Valid till:10/29/2017. Qouta left:160</p>
+          <p class="date">10/01/2017-31/10/2017</p>
+        </div>
+      </div>
+    </div>
+    </body>
